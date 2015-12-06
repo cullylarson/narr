@@ -1,5 +1,6 @@
 import narr from "./index.js"
 
+// [min, max)
 const randomInt = (min, max) => Math.floor(Math.random() * (max - min)) + min
 const characters = "abcdefghijklmonpqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
 
