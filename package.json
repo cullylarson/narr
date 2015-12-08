@@ -6,6 +6,7 @@
     "compile": "babel -d dist/ src/",
     "prepublish": "npm run compile",
     "test": "npm run compile && mocha dist/test.js",
+    "time": "babel-node src/time.js",
     "coverage": "nyc npm test && nyc report --reporter=html",
     "coveralls": "nyc npm test && nyc report --reporter=text-lcov | coveralls",
     "examples": "babel-node src/examples.js"
