@@ -1,6 +1,6 @@
 {
   "name": "narr",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Creates an array of size N, filled with undefined, without iterating to fill. Useful for applying higher order functions (e.g. map, reduce) to produce dense arrays of size N.",
   "scripts": {
     "compile": "babel -d dist/ src/",

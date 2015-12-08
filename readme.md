@@ -1,7 +1,10 @@
 # narr [![Build Status](https://travis-ci.org/cullylarson/narr.svg?branch=master)](https://travis-ci.org/cullylarson/narr) [![Coverage Status](https://coveralls.io/repos/cullylarson/narr/badge.svg?branch=master&service=github)](https://coveralls.io/github/cullylarson/narr?branch=master)
 
-> Creates an array of size N, filled with undefined, without iterating to fill. Useful for applying higher order functions (e.g. map, reduce) to produce dense arrays of size N.
+> Creates an array of size N, filled with undefined. Useful for applying higher order functions (e.g. map, reduce) to produce dense arrays of size N.
 
+For some reason when I made this, I thought the method I used wouldn't iterate N times in order to fill the array.
+However, since it uses Array.apply, it actually uses the call stack to create the array.  This has inherent
+limitations and kinda makes this library a bit useless.  I might refactor it to use generators some day.
 
 ## Install
 
