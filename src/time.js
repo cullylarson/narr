@@ -1,6 +1,6 @@
 import narr from "./index.js"
 
-const numFactors = 10
+const numFactors = 8
 
 narr(numFactors).reduce((n) => {
     console.time(`Create ${n}`)

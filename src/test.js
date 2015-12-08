@@ -27,6 +27,29 @@ describe("Narr", () => {
         })
     })
 
+    describe("For Ns of various size, with a default value provided", () => {
+        it("Should produce arrays of length N", () => {
+            testSizes.forEach((n) => {
+                const testArr = narr(n, 123)
+
+                assert.equal(testArr.length, n)
+            })
+        })
+
+        it("Should produce arrays filled with N elements of the default value", () => {
+            testSizes.forEach((n) => {
+                const testArr = narr(n, 123)
+
+                const totalFound = testArr.reduce((carry, x) => {
+                    assert.equal(x, 123)
+                    return carry+1
+                }, 0)
+
+                assert.equal(totalFound, n)
+            })
+        })
+    })
+
     describe("For N of zero", () => {
         it("Should produce an array of length zero", () => {
             const testArr = narr(0)

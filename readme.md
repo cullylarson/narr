@@ -2,9 +2,10 @@
 
 > Creates an array of size N, filled with undefined. Useful for applying higher order functions (e.g. map, reduce) to produce dense arrays of size N.
 
-For some reason when I made this, I thought the method I used wouldn't iterate N times in order to fill the array.
-However, since it uses Array.apply, it actually uses the call stack to create the array.  This has inherent
-limitations and kinda makes this library a bit useless.  I might refactor it to use generators some day.
+For some reason when I made originally this, I thought the method I used wouldn't iterate N times in order to fill the array.
+Turns out that wasn't the case, and it actually used the call stack to produce the array.  That had some inherent
+limitations.  So, I'm now using a loop to fill the array.  It's still fast, but it's basically the same as a million
+other packages that do the same thing.  Since I wrote some tests and docs, I'll just leave it up.
 
 ## Install
 
