@@ -37,9 +37,7 @@ describe("Narr", () => {
         it("Should not have any elements", () => {
             const testArr = narr(0)
 
-            const totalFound = testArr.reduce((carry, x) => {
-                return carry+1
-            }, 0)
+            const totalFound = testArr.reduce((carry, x) => carry+1, 0)
 
             assert.equal(totalFound, 0)
         })
@@ -63,9 +61,7 @@ describe("Sparse Arrays", () => {
             testSizes.forEach((n) => {
                 const testArr = new Array(n)
 
-                const totalFound = testArr.reduce((carry, x) => {
-                    return carry+1
-                }, 0)
+                const totalFound = testArr.reduce((carry, x) => carry+1, 0)
 
                 assert.equal(totalFound, 0)
             })
