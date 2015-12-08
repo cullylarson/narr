@@ -38,7 +38,6 @@ describe("Narr", () => {
             const testArr = narr(0)
 
             const totalFound = testArr.reduce((carry, x) => {
-                assert.equal(x, undefined)
                 return carry+1
             }, 0)
 
@@ -65,7 +64,6 @@ describe("Sparse Arrays", () => {
                 const testArr = new Array(n)
 
                 const totalFound = testArr.reduce((carry, x) => {
-                    assert.equal(x, undefined)
                     return carry+1
                 }, 0)
 
